@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Question</title>
+</head>
+<body>
+    <h1>Add a New Poll Question</h1>
+    
+    <!-- The form method MUST be POST and include the CSRF token for security -->
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- This renders the custom form we built in forms.py -->
+        {{ form.as_p }}
+        
+        <button type="submit">Publish Question</button>
+    </form>
+    
+    <br>
+    <a href="{% url 'polls:index' %}">Cancel and go back</a>
+</body>
+</html>
