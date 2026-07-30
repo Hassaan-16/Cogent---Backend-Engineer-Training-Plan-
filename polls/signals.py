@@ -29,3 +29,4 @@ def notify_delete_question(sender, instance, **kwargs):
             instance.question_text
         }' was just deleted!"
     )
+    
